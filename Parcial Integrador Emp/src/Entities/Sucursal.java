@@ -12,6 +12,7 @@ public class Sucursal extends Base {
     private LocalTime horarioCierre;
     private Set<Categoria> categorias;
     private Set<Promocion> promociones;
+    private Set<Pedido> pedidos;
 
     public Sucursal(String nombre,  LocalTime horarioApertura, LocalTime horarioCierre) {
         super();
@@ -20,6 +21,7 @@ public class Sucursal extends Base {
         this.horarioCierre = horarioCierre;
         this.categorias = new HashSet<>();
         this.promociones = new HashSet<>();
+        this.pedidos = new HashSet<>();
     }
 
     public HashSet<Categoria> getCategorias() {
