@@ -5,7 +5,7 @@ public abstract class Articulo extends Base {
     protected Double precioVenta;
     private UnidadMedida unidadMedida;
     private Categoria categoria;
-    private Imagen imagen;
+    private Set<Imagen> imagenes = new Hashset<>();
 
     public Articulo(Long id, String denominacion, Double precioVenta) {
         super(id);
