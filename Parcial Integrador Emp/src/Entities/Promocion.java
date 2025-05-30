@@ -17,7 +17,7 @@ public class Promocion extends Base {
     private Double precioPromocional;
     private TipoPromocion tipoPromocion;
     private Set<Articulo> articulos;
-    private Imagen imagen;
+    private Set<Imagen> imagenes = new Hashset<>();
 
     public Promocion() {
         this.articulos = new HashSet<>();
