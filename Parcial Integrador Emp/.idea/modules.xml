@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Parcial Integrador Emp.iml" filepath="$PROJECT_DIR$/Parcial Integrador Emp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mi-proyecto-jdbc-hibernate.main.iml" filepath="$PROJECT_DIR$/.idea/modules/mi-proyecto-jdbc-hibernate.main.iml" />
     </modules>
   </component>
 </project>
