@@ -19,7 +19,6 @@ public class Main {
         try (Connection conexion = DriverManager.getConnection(url, usuario, clave)) {
             System.out.println("✅ ¡Conexión exitosa!");
 
-            // Creación de objetos con Builder
             Pais argentina = Pais.builder()
                     .nombre("Argentina")
                     .build();
@@ -41,13 +40,15 @@ public class Main {
                     .localidad(dorrego)
                     .build();
 
-
+            //Creacion de empresa
             Empresa laTapera = Empresa.builder()
                     .nombre("La Tapera")
                     .razonSocial("Venta de comida")
                     .cuil(1233444555)
                     .build();
 
+
+            //Creacion de sucursal
             Sucursal tapera1 = Sucursal.builder()
                     .nombre("Sucursal Principal")
                     .horarioApertura(LocalTime.of(11, 30))
@@ -80,6 +81,7 @@ public class Main {
                     .categoria(categoriaPrincipal)
                     .build();
 
+            //Creacion de Articulo manufacaturado
             ArticuloManufacturado pizza = ArticuloManufacturado.builder()
                     .denominacion("Pizza")
                     .precioVenta(1200.0)
@@ -88,6 +90,11 @@ public class Main {
                     .tiempoEstimadoMinutos(30)
                     .unidadMedida(unidad)
                     .categoria(categoriaPrincipal)
+                    .build();
+
+            //Creacion de Articulo manufacaturado Detalle
+            ArticuloManufacturadoDetalle detallePizza = ArticuloManufacturadoDetalle.builder()
+                    .cantidad(2)
                     .build();
 
             // Creación de promoción
@@ -145,6 +152,12 @@ public class Main {
                     .sucursal(tapera1)
                     .build();
 
+            //Creacion de imagen
+            Imagen imagenCliente = Imagen.builder()
+                    .denominacion("Foto de perfil")
+                    .build();
+
+
 
             // Creación de factura
             Factura factura = Factura.builder()
@@ -155,16 +168,9 @@ public class Main {
                     .build();
 
             System.out.println("🟢 Datos creados con éxito:");
-            System.out.println(laTapera);
-            System.out.println(tapera1);
-            System.out.println(pizza);
-            System.out.println(promoHappyHour);
-            System.out.println(cliente);
-            System.out.println(pedido);
-            System.out.println(factura);
+            System.out.println(imagenCliente);
 
-            // Aquí iría la lógica para guardar en la base de datos
-            // usando DAOs similares a los del ejemplo
+
             EmpresaDAO empresaDAO = new EmpresaDAO();
             empresaDAO.save(conexion, laTapera);
 
