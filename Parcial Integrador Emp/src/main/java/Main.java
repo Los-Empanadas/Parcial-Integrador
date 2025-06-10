@@ -168,6 +168,13 @@ public class Main {
                     .build();
 
             System.out.println("🟢 Datos creados con éxito:");
+            System.out.println(laTapera);
+            System.out.println(tapera1);
+            System.out.println(pizza);
+            System.out.println(promoHappyHour);
+            System.out.println(cliente);
+            System.out.println(pedido);
+            System.out.println(factura);
             System.out.println(imagenCliente);
 
 
